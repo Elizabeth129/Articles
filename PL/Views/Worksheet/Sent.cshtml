@@ -1,0 +1,21 @@
+﻿@model PL.Models.Ankete
+@{
+    ViewBag.Title = "Sent";
+}
+
+
+<div class="article">
+    <h3 class="name-article">Результаты анкеты</h3>
+    <h4>Ваше имя: @Model.Name</h4>
+    <h4>Ваша фамилия: @Model.Surname</h4>
+    <h4>Ваша почта: @Model.Email</h4>
+    <h4>Ваш возраст: @ViewBag.AgeName</h4>
+    <h4>Ваши любимые жанры: </h4>
+    <ul class="genre">
+        @foreach (var item in ViewBag.Genres)
+        {
+            <li>@item</li>
+        }
+    </ul>
+    <h4>Столько времени вы уделяете чтению: @ViewBag.TimeName</h4>
+</div>

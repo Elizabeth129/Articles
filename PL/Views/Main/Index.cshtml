@@ -1,0 +1,27 @@
+﻿@model PL.ViewModel.ArticleIndex
+@using PL.Helpers
+
+@{
+    ViewBag.Title = "Index";
+}
+@for (int i = 0; i < Model.Articles.Count(); i++)
+{
+
+    <div class="article">
+        <h3 class="name-article">@Model.Articles.ElementAt(i).Headline</h3>
+        <hr noshade size="3" color="#bc4123">
+        <p class="text-article">
+            @Model.Articles.ElementAt(i).Text.Substring(0, 200)...
+        </p>
+        @using (Html.BeginForm("AllText", "Main", FormMethod.Post))
+        {
+            <input type="hidden" name="Id" value="@Html.ValueFor(modelItem => Model.Articles.ElementAt(i).Id)" />
+            <input type="submit" name="Button" value="Читать далее" id="button" />
+        }
+        <h5 class="date-article">@Model.Articles.ElementAt(i).Date.ToString("dd/MM/yyyy")</h5>
+    </div>
+}
+<br />
+<div class="btn-group">
+    @Html.PageLinks(Model.PageInfo, x => Url.Action("Index", new { page = x }))
+</div>

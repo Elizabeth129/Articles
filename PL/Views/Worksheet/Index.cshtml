@@ -1,0 +1,44 @@
+﻿@model PL.Models.Ankete
+
+@{
+    ViewBag.Title = "Index";
+}
+    <div class="article">
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            @Html.LabelFor(m => m.Name)<br />
+            @Html.ValidationMessageFor(m => m.Name)
+            <br />
+            @Html.TextBoxFor(m => m.Name, new { placeholder = "Enter your name" });
+            <br>
+            @Html.LabelFor(m => m.Surname)<br />
+            @Html.ValidationMessageFor(m => m.Surname)
+            <br />
+            @Html.TextBoxFor(m => m.Surname, new { placeholder = "Enter text" });
+            <br>
+            @Html.LabelFor(m => m.Email)<br />
+            @Html.ValidationMessageFor(m => m.Email)
+            <br />
+            @Html.TextBoxFor(m => m.Email, new { type = "email", placeholder = "example@mail.ru" })
+            <br>
+            @Html.LabelFor(m => m.Age) <br />
+            @Html.ValidationMessageFor(m => m.Age)
+            @Html.DropDownListFor(m => m.AgeId, ViewBag.Age as IEnumerable<SelectListItem>)
+            <br>
+            @Html.LabelFor(m => m.AnketeGenres)<br />
+            @Html.ValidationMessageFor(m => m.AnketeGenres)
+            <br />
+            foreach (var item in ViewBag.Genre)
+            {
+                @Html.CheckBox("Genre", false, new { value = item.GenreName })
+                <span>@item.GenreName</span><br />
+            };
+            @Html.LabelFor(m => m.Time) <br />
+            @Html.ValidationMessageFor(m => m.Time)
+            @Html.DropDownListFor(m => m.TimeId, ViewBag.Time as IEnumerable<SelectListItem>)
+            <br />
+            <input type="submit" name="Button" value="Submit" id="button" />
+        }
+
+    </div>

@@ -1,0 +1,14 @@
+D:\Epam\Task25_Low\DAL\bin\Debug\DAL.dll.config
+D:\Epam\Task25_Low\DAL\bin\Debug\DAL.dll
+D:\Epam\Task25_Low\DAL\bin\Debug\DAL.pdb
+D:\Epam\Task25_Low\DAL\bin\Debug\AutoMapper.dll
+D:\Epam\Task25_Low\DAL\bin\Debug\EntityFramework.dll
+D:\Epam\Task25_Low\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Epam\Task25_Low\DAL\bin\Debug\Ninject.dll
+D:\Epam\Task25_Low\DAL\bin\Debug\AutoMapper.xml
+D:\Epam\Task25_Low\DAL\bin\Debug\EntityFramework.xml
+D:\Epam\Task25_Low\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Epam\Task25_Low\DAL\bin\Debug\Ninject.xml
+D:\Epam\Task25_Low\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Epam\Task25_Low\DAL\obj\Debug\DAL.dll
+D:\Epam\Task25_Low\DAL\obj\Debug\DAL.pdb

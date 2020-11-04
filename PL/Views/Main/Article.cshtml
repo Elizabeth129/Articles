@@ -1,0 +1,17 @@
+﻿@model PL.Models.Article
+
+@{
+    ViewBag.Title = "Article";
+}
+
+    <div class="article">
+        <h3 class="name-article">@ViewBag.Article.Headline</h3>
+        <hr noshade size="3" color="#bc4123">
+        <p class="text-article">
+            @ViewBag.Article.Text
+        </p>
+
+        <h5 class="date-article">@ViewBag.Article.Date.ToString("dd/MM/yyyy")</h5>
+        @Html.ActionLink("Назад", "Index", "Main")
+    </div>
+
